@@ -35,9 +35,19 @@ const routes = [
         component: () => import("@/pages/Categories.vue"),
       },
       {
-        name: "category/:id",
+        name: "category",
         path: "category/:id",
         component: () => import("@/pages/Category.vue"),
+      },
+      {
+        name: "category_quiz",
+        path: "category/:id/quiz/:quiz_id",
+        component: () => import("@/pages/Category/Quiz.vue"),
+      },
+      {
+        name: "category_quiz_question",
+        path: "category/:id/quiz/:quiz_id/question/:question_id",
+        component: () => import("@/pages/Category/Quiz/Question.vue"),
       },
     ],
   },

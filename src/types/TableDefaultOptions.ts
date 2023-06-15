@@ -3,6 +3,7 @@ interface TableDefaultOptions {
   itemsPerPage: number;
   search?: string;
   category_id?: number;
+  quiz_id?: number;
   first?: number;
 }
 

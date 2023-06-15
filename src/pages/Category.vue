@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div class="d-flex mb-2">
+      <v-spacer></v-spacer>
+      <v-btn @click="$router.push(`/categories`)">Go Back</v-btn>
+    </div>
     <div class="d-flex">
       <div class="text-h5">Category : {{ category.name }}</div>
       <v-spacer></v-spacer>
@@ -32,6 +36,14 @@
         <div class="quizzes-description">{{ item.raw.description }}</div>
       </template>
       <template v-slot:item.actions="{ item }">
+        <v-icon
+          color="primary"
+          size="small"
+          class="me-2"
+          @click="$router.push(`/category/${category.id}/quiz/${item.raw.id}`)"
+        >
+          mdi-eye
+        </v-icon>
         <v-icon
           color="warning"
           size="small"
